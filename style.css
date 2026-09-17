@@ -1,0 +1,414 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: 30px auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    color: #1e3a8a;
+}
+
+.page-header p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #e5e7eb;
+}
+
+.card h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.card h3 {
+    color: #334155;
+    margin: 20px 0 12px;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   FORM ROW
+   ========================================================= */
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.form-group.small-field {
+    max-width: 160px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #374151;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   INPUT / SELECT
+   ========================================================= */
+
+input[type="text"],
+input[type="number"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 11px 13px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    background: white;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================================
+   SMALL TEXT
+   ========================================================= */
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.form-group label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* =========================================================
+   WORKING DAYS
+   ========================================================= */
+
+.days-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.days-container label {
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: #1e40af;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.days-container label:hover {
+    background: #dbeafe;
+}
+
+
+/* =========================================================
+   LUNCH BREAK
+   ========================================================= */
+
+#lunchTimeSection {
+    display: flex;
+    gap: 20px;
+
+    padding: 15px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 10px;
+
+    margin-top: 10px;
+}
+
+#lunchTimeSection .form-group {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   SUBJECT SECTION
+   ========================================================= */
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   SUBJECT ROW
+   ========================================================= */
+
+.subject-row {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+}
+
+.subject-row .form-group {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+
+/* Add Subject */
+
+.secondary-btn {
+    background: #e0e7ff;
+
+    color: #3730a3;
+
+    padding: 10px 16px;
+}
+
+.secondary-btn:hover {
+    background: #c7d2fe;
+}
+
+
+/* Remove Subject */
+
+.remove-btn {
+    width: 38px;
+
+    height: 38px;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 16px;
+
+    flex-shrink: 0;
+}
+
+.remove-btn:hover {
+    background: #fecaca;
+}
+
+
+/* =========================================================
+   GENERATE SECTION
+   ========================================================= */
+
+.generate-section {
+    text-align: center;
+
+    padding: 15px 0 35px;
+}
+
+.generate-btn {
+    background: #2563eb;
+
+    color: white;
+
+    padding: 14px 30px;
+
+    font-size: 17px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.generate-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.generate-section p {
+    margin-top: 10px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .form-row {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .subject-row {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .form-group.small-field {
+        max-width: none;
+    }
+
+    .remove-btn {
+        width: 100%;
+    }
+
+    #lunchTimeSection {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+}
